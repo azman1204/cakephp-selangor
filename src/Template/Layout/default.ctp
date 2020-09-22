@@ -10,6 +10,9 @@
 </head>
 <body>
     <?= $this->element('menu') ?>
-    <?= $this->fetch('content') ?>
+    <div class='container'>
+        <?= $this->Flash->render() ?>
+        <?= $this->fetch('content') ?>
+    </div>
 </body>
 </html>

@@ -11,7 +11,7 @@
         <td><?= $cake->price ?></td>
         <td>
             <a href="delete?id=<?= $cake->id ?>"><span class='glyphicon glyphicon-trash'></span></a>
-            <a href=""><span class='glyphicon glyphicon-pencil'></span></a>
+            <a href="edit?id=<?= $cake->id ?>"><span class='glyphicon glyphicon-pencil'></span></a>
         </td>
     </tr>
     <?php endforeach; ?>
