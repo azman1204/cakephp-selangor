@@ -1,6 +1,18 @@
 
 <a href='create' class='btn btn-primary'>New Cake</a>
 
-<?php foreach ($cakes as $cake) : ?>
-    <li><?= $cake->name ?> <?= $cake->price ?></li>
-<?php endforeach; ?>
+<table class='table table-striped  table-bordered table-hover'>
+    <?php 
+    $no = 1;
+    foreach ($cakes as $cake) : ?>
+    <tr>
+        <td><?= $no++ ?></td>
+        <td><?= $cake->name ?></td>
+        <td><?= $cake->price ?></td>
+        <td>
+            <a href="delete?id=<?= $cake->id ?>"><span class='glyphicon glyphicon-trash'></span></a>
+            <a href=""><span class='glyphicon glyphicon-pencil'></span></a>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
