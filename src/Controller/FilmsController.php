@@ -6,8 +6,8 @@ class FilmsController extends AppController {
         if($this->request->is('post')) {
             // filter by title
             $title = $this->request->getData('title');
-            //dd($this->Films->find()->where("title LIKE '%$title%'"));
-            $films = $this->paginate($this->Films->find('all'));
+            $query = $this->Films->find('all', ['conditions' => ["title LIKE" => "%$title%"]]);
+            $films = $this->paginate($query);
             //$films = $this->paginate($this->Films);
         } else {
             // list all

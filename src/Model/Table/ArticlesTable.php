@@ -43,9 +43,16 @@ class ArticlesTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
-        $validator
-            ->scalar('title')
-            ->minLength('title', 5);
+        // $validator
+        //     ->scalar('title')
+        //     ->minLength('title', 5);
+        
+        $validator->add('title', [
+            'minLength' => [
+                'rule' => ['minLength', 5], 
+                'message' => 'Min tajuk ialah 5 karakter'
+            ]
+        ]);
 
         $validator
             ->scalar('content')
