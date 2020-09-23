@@ -16,7 +16,7 @@ class LoginController extends AppController {
     }
 
     public function logout() {
-        $this->redirect($this->Auth->logout());
+        $this->redirect($this->Auth->logout()); 
     }
 
     public function passwordGenerator() {
