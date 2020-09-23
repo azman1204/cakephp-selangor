@@ -15,6 +15,10 @@ class LoginController extends AppController {
         }
     }
 
+    public function logout() {
+        $this->redirect($this->Auth->logout());
+    }
+
     public function passwordGenerator() {
         $hasher = new \Cake\Auth\DefaultPasswordHasher();
         die($hasher->hash('1234'));
