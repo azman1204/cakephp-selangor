@@ -33,18 +33,18 @@
         <tbody>
             <?php foreach ($films as $film): ?>
             <tr>
-                <td><?= $this->Number->format($film->film_id) ?></td>
-                <td><?= h($film->title) ?></td>
-                <td><?= h($film->release_year) ?></td>
-                <td><?= $this->Number->format($film->language_id) ?></td>
-                <td><?= $this->Number->format($film->original_language_id) ?></td>
-                <td><?= $this->Number->format($film->rental_duration) ?></td>
-                <td><?= $this->Number->format($film->rental_rate) ?></td>
-                <td><?= $this->Number->format($film->length) ?></td>
-                <td><?= $this->Number->format($film->replacement_cost) ?></td>
-                <td><?= h($film->rating) ?></td>
-                <td><?= h($film->special_features) ?></td>
-                <td><?= h($film->last_update) ?></td>
+                <td><?= $film->film_id ?></td>
+                <td><?= $film->title ?></td>
+                <td><?= $film->release_year ?></td>
+                <td><?= $film->language_id ?></td>
+                <td><?= $film->original_language_id ?></td>
+                <td><?= $film->rental_duration ?></td>
+                <td><?= $film->rental_rate ?></td>
+                <td><?= $film->length ?></td>
+                <td><?= $film->replacement_cost ?></td>
+                <td><?= $film->rating ?></td>
+                <td><?= $film->special_features ?></td>
+                <td><?= $film->last_update ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $film->film_id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $film->film_id]) ?>
