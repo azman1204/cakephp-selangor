@@ -20,3 +20,14 @@
     <?php endforeach; ?>
     </tbody>
 </table>
+
+<div class="paginator">
+        <ul class="pagination">
+            <?= $this->Paginator->first('<< ' . __('Mula')) ?>
+            <?= $this->Paginator->prev('< ' . __('Sebelum')) ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(__('Seterus') . ' >') ?>
+            <?= $this->Paginator->last(__('Akhir') . ' >>') ?>
+        </ul>
+        <p><?= $this->Paginator->counter(['format' => __('Mukasurat {{page}} dari {{pages}}, Papar {{current}} rekod(s) dari {{count}} jumlah')]) ?></p>
+    </div>
